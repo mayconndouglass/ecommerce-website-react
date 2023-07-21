@@ -1,10 +1,15 @@
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global'
+
+// temp
+import { Home } from './pages/Home'
 
 export function App() {
     return (
         <ThemeProvider theme={defaultTheme}>
-            <h1>Hello Word</h1>
+            <Home />
+            <GlobalStyle />
         </ThemeProvider>
     )
 }
