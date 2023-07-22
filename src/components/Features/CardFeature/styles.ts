@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
@@ -8,8 +8,8 @@ export const Container = styled.div`
     max-width: 305px;
     height: 245px;
     padding: 3rem;
-    background-color: ${props => props.theme["light-gray"]};
-    color: ${props => props.theme["dark-primary"]};
+    background-color: ${props => props.theme['light-gray']};
+    color: ${props => props.theme['dark-primary']};
 
     img {
         width: 1.5rem;

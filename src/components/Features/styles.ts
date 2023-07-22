@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.section`
     max-width: 1440px;
@@ -9,7 +9,7 @@ export const Container = styled.section`
         font-family: "Clash Display", sans-serif;
         font-size: 1.5rem;
         font-weight: 400;
-        color: ${props => props.theme["dark-primary"]};
+        color: ${props => props.theme['dark-primary']};
         text-align: center;
     }
 
