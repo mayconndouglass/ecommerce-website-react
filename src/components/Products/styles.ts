@@ -6,16 +6,15 @@ export const Container = styled.section`
     justify-content: space-between;
 
     margin: 0 auto;
-    width: 1440px;
-    height: 634px;
+    max-width: 1440px;
+    min-height: 634px;
     padding: 0.875rem 2.75rem 1.375rem 2.75rem;
 
     .cards-container {
         display: grid;
         justify-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1rem;
-        /* margin-top: 3rem; */
     }
 
     Button {

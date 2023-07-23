@@ -5,11 +5,11 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 20px;
 
-    width: 305px;
+    max-width: 305px;
     height: 462px;
 
     img {
-        width: 305px;
+        max-width: 305px;
         height: 375px;
         cursor: pointer;
     }
