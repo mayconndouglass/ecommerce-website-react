@@ -5,6 +5,8 @@ import { Hero } from './components/Hero'
 import { Features } from '../../components/Features'
 import { Products } from '../../components/Products'
 import { About } from './components/About'
+import { Signup } from './components/Signup'
+import { Footer } from './components/Footer'
 
 export const Home = () => {
 
@@ -15,6 +17,8 @@ export const Home = () => {
             <Features />
             <Products />
             <About />
+            <Signup />
+            <Footer />
         </S.Container>
     )
 }

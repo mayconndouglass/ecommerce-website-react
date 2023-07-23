@@ -1,29 +1,24 @@
-import iconDelivery from '../../../public/assets/images/icon-delivery.svg'
-import iconCheckmark from '../../../public/assets/images/icon-checkmark.svg'
-import iconPuchase from '../../../public/assets/images/icon-puchase.svg'
-import iconSprout from '../../../public/assets/images/icon-sprout.svg'
-
 export const cardData = [
     {
-        icon: iconDelivery,
+        icon: './public/assets/images/icon-delivery.svg',
         title: 'Next day as standard',
         content: 'Order before 3pm and getyour order the next day as standard',
         alt: 'Delivery'
     },
     {
-        icon: iconCheckmark,
+        icon: './public/assets/images/icon-checkmark.svg',
         title: 'Made by true artisans',
         content: 'Handmade crafted goods made with real passion and craftmanship',
         alt: 'CheckMark'
     },
     {
-        icon: iconPuchase,
+        icon: './public/assets/images/icon-puchase.svg',
         title: 'Unbeatable prices',
         content: 'For our materials and quality you won’t find better prices anywhere',
         alt: 'Puchase'
     },
     {
-        icon: iconSprout,
+        icon: './public/assets/images/icon-sprout.svg',
         title: 'Recycled packaging',
         content: 'We use 100% recycled to ensure our footprint is more manageable',
         alt: 'Sprout'
