@@ -1,5 +1,7 @@
 import * as S from './styles'
 
+import iconChecklist from '/public/assets/images/icon-checklist.svg'
+
 export const Signup = () => {
     return (
         <S.Container>
@@ -9,25 +11,25 @@ export const Signup = () => {
                 ranges, sales, pop up stores and more
             </p>
 
-            <div className="radios-container">
-                <div className='radio-container'>
-                    <div className="custom-checkbox"><span>✓</span></div>
+            <S.Radios>
+                <div className="radio-container">
+                    <img src={iconChecklist} alt="Icon Checklist" />
                     <p>Exclusive offers</p>
                 </div>
 
-                <div className='radio-container'>
-                    <div className="custom-checkbox"><span>✓</span></div>
+                <div className="radio-container">
+                    <img src={iconChecklist} alt="Icon Checklist" />
                     <p>Free events</p>
                 </div>
 
-                <div className='radio-container'>
-                    <div className="custom-checkbox"><span>✓</span></div>
+                <div className="radio-container">
+                    <img src={iconChecklist} alt="Icon Checklist" />
                     <p>Large discounts</p>
                 </div>
-            </div>
+            </S.Radios>
 
             <div className="input-container">
-                <input type="text" placeholder='your@email.com' />
+                <input type="text" placeholder="your@email.com" />
                 <button>Sign up</button>
             </div>
         </S.Container>
