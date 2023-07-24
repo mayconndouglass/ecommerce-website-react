@@ -8,7 +8,7 @@ export const Container = styled.section`
     max-width: 1440px;
     height: 704px;
     margin: 0 auto;
-    padding: 0 5rem;/* No figma está 3rem */
+    padding: 0 3rem; /* No figma está 3rem */
     background-image: url('../../../../../public/assets/images/hero.jpg');
 
     .card-container {

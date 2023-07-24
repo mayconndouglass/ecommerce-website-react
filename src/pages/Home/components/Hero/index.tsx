@@ -1,5 +1,6 @@
 import * as S from './styles'
 import { Button } from '../../../../components/Button'
+
 export const Hero = () => {
     return (
         <S.Container>
