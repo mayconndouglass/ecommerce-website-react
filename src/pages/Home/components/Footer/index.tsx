@@ -5,10 +5,10 @@ export const Footer = () => {
     return (
         <S.Container>
             <div className="content-container">
-                <div className="grid-container">
+                <S.Grid>
                     <div className="list">
+                        <p>Menu</p>
                         <ul>
-                            <li>Menu</li>
                             <li>New arrivals</li>
                             <li>Best sellers</li>
                             <li>Recently viewed</li>
@@ -18,8 +18,8 @@ export const Footer = () => {
                     </div>
 
                     <div className="list">
+                        <p>Categories</p>
                         <ul>
-                            <li>Categories</li>
                             <li>Crockery</li>
                             <li>Furniture</li>
                             <li>Homeware</li>
@@ -30,8 +30,8 @@ export const Footer = () => {
                     </div>
 
                     <div className="list">
+                        <p>Our company</p>
                         <ul>
-                            <li>Our company</li>
                             <li>About us</li>
                             <li>Vacancies</li>
                             <li>Contact us</li>
@@ -44,25 +44,27 @@ export const Footer = () => {
                         <h4>Join our mailing list</h4>
 
                         <div className="input-footer">
-                            <input type="text" placeholder='your@email.com' />
+                            <input type="text" placeholder="your@email.com" />
                             <button>Sign up</button>
                         </div>
                     </div>
-                </div>
+                </S.Grid>
 
-                <hr />
-
-                <div className="info-container">
-                    <div className="copyright">
-                        Copyright 2022 Avion LTD
-                    </div>
+                <S.Divider />
+                <S.Info>
+                    <div className="copyright">Copyright 2022 Avion LTD</div>
 
                     <div className="social-media">
                         {socialMedia.map(({ alt, title, icon }) => (
-                            <img key={title} src={icon} alt={alt} title={title} />
+                            <img
+                                key={title}
+                                src={icon}
+                                alt={alt}
+                                title={title}
+                            />
                         ))}
                     </div>
-                </div>
+                </S.Info>
             </div>
         </S.Container>
     )
