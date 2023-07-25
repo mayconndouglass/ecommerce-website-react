@@ -27,4 +27,35 @@ export const Container = styled.div`
         font-size: 1.125rem;
         color: ${props => props.theme['dark-primary']}
     }
+
+
+    @media screen and (max-width: 704px) {
+        width: 205px;
+        height: 362px;
+
+        img {
+            width: 205px;
+            height: 275px;
+        }
+    }
+
+    @media screen and (max-width: 605px) {
+        width: 163px;
+        height: 288px;
+
+        img {
+            width: 163px;
+            height: 201px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        width: 205px;
+        height: 362px;
+
+        img {
+            width: 205px;
+            height: 250px;
+        }
+    }
 `

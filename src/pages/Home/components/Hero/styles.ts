@@ -71,7 +71,7 @@ export const Container = styled.section`
             width: 100%;
             height: 300px;
             background-image: url("/assets/images/hero.jpg");
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
         }

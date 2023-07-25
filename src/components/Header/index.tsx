@@ -1,10 +1,16 @@
+import { useState } from 'react'
 import * as S from './styles'
 
 import iconSearch from '../../../public/assets/images/icon-search.svg'
 import iconAvatar from '../../../public/assets/images/icon-avatar.svg'
 import iconCart from '../../../public/assets/images/icon-cart.svg'
+import iconMenu from '../../../public/assets/images/icon-menu.svg'
+import arrow from '../../../public/assets/images/right-arrow.png'
 
 export const Header = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    console.log(isOpen)
+
     return (
         <S.Container>
             <S.HeaderTop>
@@ -13,6 +19,37 @@ export const Header = () => {
                 <div>
                     <img src={iconCart} alt="Icon Card" />
                     <img src={iconAvatar} alt="Icon Avatar" />
+                    <img className='menu' src={iconMenu} alt="Icon Menu" onClick={() => setIsOpen(!isOpen)} />
+
+                    <S.Sidebar active={isOpen} >
+                        <img src={arrow} alt="Fechar menu" onClick={() => setIsOpen(!isOpen)} />
+
+                        <div className="menuLinks">
+                            <ul>
+                                <li>
+                                    <a href="#">Plant pots</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ceramics</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tables</a>
+                                </li>
+                                <li>
+                                    <a href="#">Chairs</a>
+                                </li>
+                                <li>
+                                    <a href="#">Crockery</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tableware</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cutlery</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </S.Sidebar>
                 </div>
             </S.HeaderTop>
             <div className="divider"></div>
@@ -26,6 +63,9 @@ export const Header = () => {
                     </li>
                     <li>
                         <a href="#">Tables</a>
+                    </li>
+                    <li>
+                        <a href="#">Chairs</a>
                     </li>
                     <li>
                         <a href="#">Crockery</a>
