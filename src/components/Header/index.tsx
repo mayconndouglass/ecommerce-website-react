@@ -28,6 +28,9 @@ export const Header = () => {
                         <a href="#">Tables</a>
                     </li>
                     <li>
+                        <a href="#">Chairs</a>
+                    </li>
+                    <li>
                         <a href="#">Crockery</a>
                     </li>
                     <li>
