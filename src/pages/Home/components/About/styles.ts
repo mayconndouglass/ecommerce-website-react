@@ -93,8 +93,4 @@ export const Container = styled.section`
             }
         }
     }
-
-    @media screen and (max-width: 390px) {
-
-    }
 `
