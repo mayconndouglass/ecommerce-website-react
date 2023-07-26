@@ -43,7 +43,7 @@ export const Container = styled.section`
         }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 675px) {
         background-image: none;
         display: block;
         padding: 0;
