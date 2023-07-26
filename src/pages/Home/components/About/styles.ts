@@ -5,15 +5,16 @@ export const Container = styled.section`
     margin: 0 auto;
     gap: 12px;
     max-width: 1440px;
-    padding: 2.8rem 3.8rem;
+    width: 90%;
+    padding: 3.5rem 0;
 
     .card-about {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        padding: 4rem;/* No figma está 3rem(48px) */
-        background-color: ${props => props.theme['dark-primary']};
-        color: ${props => props.theme.white};
+        padding: 4rem; /* No figma está 3rem(48px) */
+        background-color: ${(props) => props.theme['dark-primary']};
+        color: ${(props) => props.theme.white};
         width: 50%;
 
         h3 {
@@ -30,7 +31,7 @@ export const Container = styled.section`
 
         Button {
             margin-top: auto;
-            background-color: #F9F9F926;
+            background-color: #f9f9f926;
             color: white;
         }
     }
@@ -43,11 +44,13 @@ export const Container = styled.section`
         }
     }
 
-    @media screen and  (max-width: 1080px) {
+    @media screen and (max-width: 1080px) {
         flex-direction: column;
         align-items: center;
+        width: 100%;
 
-        .card-about, .image-container {
+        .card-about,
+        .image-container {
             width: 95%;
             height: 478px;
         }
