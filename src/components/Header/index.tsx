@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import * as S from './styles'
 
-import iconSearch from '../../../public/assets/images/icon-search.svg'
-import iconAvatar from '../../../public/assets/images/icon-avatar.svg'
-import iconCart from '../../../public/assets/images/icon-cart.svg'
-import iconMenu from '../../../public/assets/images/icon-menu.svg'
-import arrow from '../../../public/assets/images/right-arrow.png'
+import iconSearch from '/assets/images/icon-search.svg'
+import iconAvatar from '/assets/images/icon-avatar.svg'
+import iconCart from '/assets/images/icon-cart.svg'
+import iconMenu from '/assets/images/icon-menu.svg'
+import arrow from '/assets/images/right-arrow.png'
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
