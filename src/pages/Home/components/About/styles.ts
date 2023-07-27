@@ -61,7 +61,7 @@ export const Container = styled.section`
     }
 
     @media screen and (max-width: 565px) {
-        padding: 1rem;
+        padding: 3rem 1rem;
 
         .card-about {
             width: 95%;
