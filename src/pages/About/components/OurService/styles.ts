@@ -9,8 +9,12 @@ export const Container = styled.section`
 
     .img-container {
         width: 50%;
+        max-height: 37rem;
+
         img {
+            display: block;
             width: 100%;
+            height: 100%;
         }
     }
 
@@ -74,12 +78,11 @@ export const Container = styled.section`
 
         .img-container {
             width: 100%;
-            max-height: 37rem;
         }
 
         .about {
             width: 100%;
-            min-height: 28rem;
+            min-height: 27rem;
             /* margin-top: 3rem; */
             /* width: min(90%, 800px); */
             /* margin: auto; */
