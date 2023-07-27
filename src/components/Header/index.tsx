@@ -9,7 +9,6 @@ import arrow from '../../../public/assets/images/right-arrow.png'
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
-    console.log(isOpen)
 
     return (
         <S.Container>

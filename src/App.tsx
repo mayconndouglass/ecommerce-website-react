@@ -4,6 +4,7 @@ import { GlobalStyle } from './styles/global'
 
 // temp
 import { Home } from './pages/Home'
+// import { ProductDetails } from './pages/ProductDetails'
 
 export function App() {
     return (
