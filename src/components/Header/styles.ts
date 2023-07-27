@@ -124,7 +124,6 @@ export const Sidebar = styled.div<statusSideBar>`
     .menuLinks {
         width: 100%;
 
-
         ul {
             width: 70%;
             margin: 0 auto;
