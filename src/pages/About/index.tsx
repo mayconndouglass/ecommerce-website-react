@@ -10,7 +10,7 @@ export const About = () => {
     return (
         <>
             <Banner />
-            <Header/>
+            <Header />
             <AboutUs />
             <AboutComponent />
             <OurService />
