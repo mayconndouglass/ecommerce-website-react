@@ -2,20 +2,22 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
     display: flex;
-    margin: 0 auto;
+    margin: 0px auto;
     gap: 12px;
-    max-width: 1440px;
+    max-width: 1340px;
     width: 90%;
-    padding: 3.5rem 0;
+    padding-block: 3rem;
 
     .card-about {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        padding: 4rem; /* No figma está 3rem(48px) */
+        padding: 4rem; /* No figma está 3rem (48px) */
         background-color: ${(props) => props.theme['dark-primary']};
         color: ${(props) => props.theme.white};
         width: 50%;
+
+        transition: 200ms ease all;
 
         h3 {
             font-family: "Clash Display", sans-serif;
@@ -41,13 +43,23 @@ export const Container = styled.section`
 
         img {
             width: 100%;
+            display: block;
         }
     }
 
     @media screen and (max-width: 1080px) {
+        /* width: 100%; */
+
+        .card-about {
+            padding: 3rem;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        padding: 3rem 0rem;
+        width: 95%;
 
         .card-about,
         .image-container {
@@ -64,8 +76,11 @@ export const Container = styled.section`
     }
 
     @media screen and (max-width: 565px) {
+<<<<<<< HEAD:src/pages/Home/components/About/styles.ts
         padding: 3rem 1rem;
 
+=======
+>>>>>>> ae25de810fa51a28091c6ebc2f8921090c53dc82:src/components/About/styles.ts
         .card-about {
             width: 95%;
             height: 342px;
