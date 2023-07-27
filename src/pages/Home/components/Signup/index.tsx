@@ -1,6 +1,9 @@
 import * as S from './styles'
 
-import iconChecklist from '/assets/images/icon-checklist.svg'
+
+// import { SignupInput } from '../../../../components/SignupInput'
+import iconChecklist from '/public/assets/images/icon-checklist.svg'
+
 
 export const Signup = () => {
     return (
@@ -32,6 +35,7 @@ export const Signup = () => {
                 <input type="text" placeholder="your@email.com" />
                 <button>Sign up</button>
             </div>
+            {/* <SignupInput buttonColor='white' inputSize='118px' /> */}
         </S.Container>
     )
 }
