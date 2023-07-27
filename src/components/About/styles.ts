@@ -76,6 +76,11 @@ export const Container = styled.section`
     }
 
     @media screen and (max-width: 565px) {
+<<<<<<< HEAD:src/pages/Home/components/About/styles.ts
+        padding: 3rem 1rem;
+
+=======
+>>>>>>> ae25de810fa51a28091c6ebc2f8921090c53dc82:src/components/About/styles.ts
         .card-about {
             width: 95%;
             height: 342px;
