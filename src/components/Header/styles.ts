@@ -102,6 +102,7 @@ export const Sidebar = styled.div<statusSideBar>`
     width: ${props => props.active ? '60%' : '0'};
     height: 100vh;
 
+    opacity: ${props => props.active ? '1' : '0'};
     transition: all;
     transition-duration: 200ms;
 
@@ -142,7 +143,7 @@ export const Sidebar = styled.div<statusSideBar>`
                 text-decoration: none;
                 color: #726e8d;
                 font-family: "Satoshi";
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 font-style: normal;
                 font-weight: 400;
             }

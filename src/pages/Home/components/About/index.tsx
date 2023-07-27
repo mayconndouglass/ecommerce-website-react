@@ -1,5 +1,5 @@
 import { Button } from '../../../../components/Button'
-import armchair from '../../../../../public/assets/images/armchair.png'
+import armchair from '/assets/images/armchair.png'
 
 import * as S from './styles'
 

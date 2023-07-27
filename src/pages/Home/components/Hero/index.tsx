@@ -14,6 +14,7 @@ export const Hero = () => {
                     View collection
                 </Button>
             </div>
+            <div className='bg-mobile'></div>
         </S.Container>
     )
 }

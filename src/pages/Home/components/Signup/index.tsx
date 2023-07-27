@@ -1,7 +1,9 @@
 import * as S from './styles'
 
+
 // import { SignupInput } from '../../../../components/SignupInput'
 import iconChecklist from '/public/assets/images/icon-checklist.svg'
+
 
 export const Signup = () => {
     return (
