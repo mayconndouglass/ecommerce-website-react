@@ -4,13 +4,10 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    max-width: 305px;
-    height: 462px;
+    width: 100%;
 
     img {
-        max-width: 305px;
-        height: 375px;
+        width: 100%;
         cursor: pointer;
     }
 
@@ -30,32 +27,18 @@ export const Container = styled.div`
 
 
     @media screen and (max-width: 704px) {
-        width: 205px;
-        height: 362px;
+        max-width: 100%;
 
         img {
-            width: 205px;
-            height: 275px;
+            max-width: 100%;
         }
     }
 
     @media screen and (max-width: 605px) {
-        width: 163px;
-        height: 288px;
+        height: 100%;
 
         img {
-            width: 163px;
-            height: 201px;
-        }
-    }
-
-    @media screen and (max-width: 375px) {
-        width: 205px;
-        height: 362px;
-
-        img {
-            width: 205px;
-            height: 250px;
+            height: auto;
         }
     }
 `

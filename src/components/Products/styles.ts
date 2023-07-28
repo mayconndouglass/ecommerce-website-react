@@ -6,18 +6,21 @@ export const Container = styled.section`
     justify-content: space-between;
 
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1340px;
     min-height: 634px;
-    padding: 0.875rem 2.75rem 1.375rem 2.75rem;
+    width: 90%;
+
+    padding-top: 0.875rem;
+    padding-bottom: 1.375rem;
 
     .cards-container {
         display: grid;
-        justify-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(294px, 1fr));
         gap: 1rem;
 
         @media screen and (max-width: 704px) {
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
         }
 
         @media screen and (max-width: 605px) {
@@ -26,10 +29,6 @@ export const Container = styled.section`
 
         @media screen and (max-width: 506px) {
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))
-        }
-
-        @media screen and (max-width: 375px) {
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
         }
     }
 
@@ -45,9 +44,5 @@ export const Container = styled.section`
 
     @media screen and (max-width: 1020px) {
         gap: 3rem;
-    }
-
-    @media screen and (max-width: 424px) {
-        padding: 0.875rem 1.25rem 1.375rem 1.25rem;
     }
 `

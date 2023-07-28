@@ -6,10 +6,12 @@ import { Products } from '../../components/Products'
 import { Features } from '../../components/Features'
 import { SignupV2 } from '../../components/SignupV2'
 import { FooterV2 } from '../../components/FooterV2'
+import { Banner } from '../../components/Banner'
 
 export const ProductDetails = () => {
     return (
-        <S.Container>
+        <S.Main>
+            <Banner />
             <HeaderV2 />
             <ProductData />
 
@@ -24,6 +26,6 @@ export const ProductDetails = () => {
             <Features />
             <SignupV2 />
             <FooterV2 />
-        </S.Container>
+        </S.Main>
     )
 }
