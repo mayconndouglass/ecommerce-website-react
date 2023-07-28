@@ -1,4 +1,3 @@
-
 import { Banner } from '../../components/Banner'
 import { AboutUs } from './components/AboutUs'
 import { Header } from './components/Header'
@@ -10,17 +9,15 @@ import { SignupV2 } from '../../components/SignupV2'
 
 export const About = () => {
     return (
-        <>
+        <main>
             <Banner />
             <Header />
             <AboutUs />
             <AboutComponent />
             <OurService />
             <Features />
-            <SignupV2/>
-            <FooterV2/>
-        </>
-
-
+            <SignupV2 />
+            <FooterV2 />
+        </main>
     )
 }

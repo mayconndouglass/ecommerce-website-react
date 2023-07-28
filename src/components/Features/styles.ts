@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-    max-width: 1440px;
+    max-width: 1340px;
+    width: 90%;
     margin: 0 auto;
     padding-block: 3rem 6rem;
-    padding-inline: 1.5rem;
+    /* padding-inline: 1.5rem; */
 
     h2 {
         font-family: "Clash Display", sans-serif;

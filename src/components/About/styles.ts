@@ -57,13 +57,13 @@ export const Container = styled.section`
 
     @media screen and (max-width: 1000px) {
         flex-direction: column;
-        align-items: center;
+
+        width: 90%;
         padding: 3rem 0rem;
-        width: 95%;
 
         .card-about,
         .image-container {
-            width: 95%;
+            width: 100%;
             height: 478px;
         }
 
@@ -76,13 +76,9 @@ export const Container = styled.section`
     }
 
     @media screen and (max-width: 565px) {
-<<<<<<< HEAD:src/pages/Home/components/About/styles.ts
-        padding: 3rem 1rem;
 
-=======
->>>>>>> ae25de810fa51a28091c6ebc2f8921090c53dc82:src/components/About/styles.ts
         .card-about {
-            width: 95%;
+            width: 100%;
             height: 342px;
             padding: 2.5rem 2.43rem;
 
@@ -102,7 +98,7 @@ export const Container = styled.section`
         }
 
         .image-container {
-            width: 95%;
+            width: 100%;
             height: 342px;
 
             img {
