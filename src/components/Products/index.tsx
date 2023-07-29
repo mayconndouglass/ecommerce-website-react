@@ -1,14 +1,20 @@
 import { CardProduct } from './CardProduct'
-import { productData } from './data'
+// import { productData } from './data'
 import { Button } from '../Button'
+
+import { ProductDataType } from '../../@types/product-data-type'
 
 import * as S from './styles'
 
-export const Products = () => {
+type ProductsProps = {
+    data: ProductDataType[]
+}
+
+export const Products = ({ data }: ProductsProps) => {
     return (
         <S.Container>
             <div className="cards-container">
-                {productData.map(product => (
+                {data.map(product => (
                     <CardProduct key={product.price} {...product} />
                 ))}
             </div>

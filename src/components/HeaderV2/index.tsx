@@ -1,9 +1,9 @@
 import * as S from './styles'
 
-import iconSearch from '../../../../../public/assets/images/icon-search.svg'
-import iconAvatar from '../../../../../public/assets/images/icon-avatar.svg'
-import iconCart from '../../../../../public/assets/images/icon-cart.svg'
-import iconMenu from '../../../../../public/assets/images/icon-menu.svg'
+import iconSearch from '../../../public/assets/images/icon-search.svg'
+import iconAvatar from '../../../public/assets/images/icon-avatar.svg'
+import iconCart from '../../../public/assets/images/icon-cart.svg'
+import iconMenu from '../../../public/assets/images/icon-menu.svg'
 
 export const HeaderV2 = () => {
     return (

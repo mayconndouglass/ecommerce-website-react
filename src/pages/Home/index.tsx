@@ -8,6 +8,8 @@ import { About } from '../../components/About'
 import { Signup } from './components/Signup'
 import { Footer } from './components/Footer'
 
+import { productData } from '../../data/product-data'
+
 export const Home = () => {
 
     return (
@@ -15,7 +17,7 @@ export const Home = () => {
             <Header />
             <Hero />
             <Features />
-            <Products />
+            <Products data={productData} />
             <About />
             <Signup />
             <Footer />
