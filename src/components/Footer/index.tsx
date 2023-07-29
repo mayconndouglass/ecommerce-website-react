@@ -1,5 +1,5 @@
 import * as S from './styles'
-import { socialMedia } from '../../../../data/social-media-data'
+import { socialMedia } from '../../data/social-media-data'
 
 export const Footer = () => {
     return (

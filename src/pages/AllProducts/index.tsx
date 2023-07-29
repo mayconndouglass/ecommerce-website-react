@@ -5,6 +5,7 @@ import { Filter } from './components/Filter'
 import { Products } from '../../components/Products'
 
 import { productDataExtend } from '../../data/product-data-extend'
+import { Footer } from '../../components/Footer'
 
 export const AllProducts = () => {
     return (
@@ -12,6 +13,7 @@ export const AllProducts = () => {
             <HeaderV2 />
             <Filter />
             <Products data={productDataExtend} />
+            <Footer />
         </S.Main>
     )
 }

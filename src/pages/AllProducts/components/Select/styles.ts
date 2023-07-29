@@ -1,6 +1,16 @@
 import styled from 'styled-components'
 
-export const Container = styled.div``
+export const Container = styled.div`
+    @media screen and (max-width: 750px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 156px;
+        height: 56px;
+        background-color: white;
+    }
+`
 
 export const Label = styled.label`
     font-family: 'Satoshi';

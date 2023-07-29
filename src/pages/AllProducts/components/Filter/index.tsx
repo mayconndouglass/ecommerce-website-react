@@ -21,6 +21,11 @@ export const Filter = () => {
                     <Select name='Date added' />
                 </div>
             </div>
+
+            <div className="filter-containers-mobile">
+                <Select name='Sorting' />
+                <Select name='Filtering' />
+            </div>
         </S.Container>
     )
 }
