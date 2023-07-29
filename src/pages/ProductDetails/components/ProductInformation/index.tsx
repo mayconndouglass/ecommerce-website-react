@@ -4,7 +4,7 @@ import productImage from '../../../../../public/assets/images/Product Image.png'
 /* import add from '../../../../../public/assets/images/add.png'
 import subtract from '../../../../../public/assets/images/subtract.png' */
 
-export const ProductData = () => {
+export const ProductInformation = () => {
     return (
         <S.Container>
             <div className="image-container">
