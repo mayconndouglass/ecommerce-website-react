@@ -1,31 +1,29 @@
+import { ProductDataType } from '../../../../@types/product-data-type'
+
 import * as S from './styles'
 
-import productImage from '../../../../../public/assets/images/Product Image.png'
 /* import add from '../../../../../public/assets/images/add.png'
 import subtract from '../../../../../public/assets/images/subtract.png' */
 
-export const ProductInformation = () => {
+export const ProductInformation = ({ data }: { data: ProductDataType }) => {
+    const { img, title, price, description, dimensions } = data
+
     return (
         <S.Container>
             <div className="image-container">
-                <img src={productImage} alt="Product Image" />
+                <img src={img} alt={title} />
             </div>
 
             <div className="data-container">
-                <h4>The Dandy Chair</h4>
-                <span>£250</span>
+                <h4>{title}</h4>
+                <span>{price}</span>
 
                 <div className="divider"></div>
 
                 <div className="description">
                     <p>Description</p>
 
-                    <p>
-                        A timeless design, with premium materials features as
-                        one of our most popular and iconic pieces. The dandy
-                        chair is perfect for any stylish living space with
-                        beech legs and lambskin leather upholstery.
-                    </p>
+                    <p>{description}</p>
                 </div>
 
                 <div className="dimensions">
@@ -36,9 +34,9 @@ export const ProductInformation = () => {
                         <p>Width</p>
                         <p>Depth</p>
 
-                        <span>110cm</span>
-                        <span>75cm</span>
-                        <span>50cm</span>
+                        <span>{dimensions.height}</span>
+                        <span>{dimensions.width}</span>
+                        <span>{dimensions.depth}</span>
                     </div>
                 </div>
 
@@ -47,9 +45,9 @@ export const ProductInformation = () => {
 
                     <div>
                         {/* <img src={add} alt="Add" /> */}
-                        <span>+</span>
-                        <span>1</span>
                         <span>-</span>
+                        <span>1</span>
+                        <span>+</span>
                         {/* <img src={subtract} alt="subtract" /> */}
                     </div>
                 </div>
