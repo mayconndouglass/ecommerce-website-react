@@ -15,7 +15,7 @@ import { Banner } from '../../components/Banner'
 
 export const ProductDetails = () => {
     const { id } = useParams()
-    const allProducts = useContext(ProductContext)
+    const { allProducts, featuredProducts } = useContext(ProductContext)
     const productData = allProducts.find(product => product.id === Number(id))
 
     return (
@@ -30,7 +30,7 @@ export const ProductDetails = () => {
                 </h3>
             </S.ProductsContainer>
 
-            <Products data={allProducts} />
+            <Products data={featuredProducts} />
 
             <Features />
             <SignupV2 />

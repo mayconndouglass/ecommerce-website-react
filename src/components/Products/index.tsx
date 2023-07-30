@@ -15,7 +15,7 @@ export const Products = ({ data }: ProductsProps) => {
         <S.Container>
             <div className="cards-container">
                 {data.map(product => (
-                    <CardProduct key={product.price} {...product} />
+                    <CardProduct key={product.id} {...product} />
                 ))}
             </div>
             <Button>

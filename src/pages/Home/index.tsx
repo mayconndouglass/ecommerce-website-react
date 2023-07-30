@@ -1,3 +1,7 @@
+import { useContext } from 'react'
+
+import { ProductContext } from '../../contexts/ProductContext'
+
 import * as S from './styles'
 
 import { Header } from '../../components/Header'
@@ -8,16 +12,15 @@ import { About } from '../../components/About'
 import { Signup } from './components/Signup'
 import { Footer } from '../../components/Footer'
 
-import { productData } from '../../data/product-data'
-
 export const Home = () => {
+    const { featuredProducts } = useContext(ProductContext)
 
     return (
         <S.Main>
             <Header />
             <Hero />
             <Features />
-            <Products data={productData} />
+            <Products data={featuredProducts} />
             <About />
             <Signup />
             <Footer />

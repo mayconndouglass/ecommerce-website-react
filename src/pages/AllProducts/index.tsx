@@ -9,13 +9,13 @@ import { Products } from '../../components/Products'
 import { Footer } from '../../components/Footer'
 
 export const AllProducts = () => {
-    const productData = useContext(ProductContext)
+    const { allProducts } = useContext(ProductContext)
 
     return (
         <S.Main>
             <HeaderV2 />
             <Filter />
-            <Products data={productData} />
+            <Products data={allProducts} />
             <Footer />
         </S.Main>
     )
