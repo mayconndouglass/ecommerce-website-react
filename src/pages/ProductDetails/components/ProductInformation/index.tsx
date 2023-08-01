@@ -1,12 +1,44 @@
+import { useState, useContext, useEffect } from 'react'
+
 import { ProductDataType } from '../../../../@types/product-data-type'
+
+import { CartContext } from '../../../../contexts/CartContext'
 
 import * as S from './styles'
 
 /* import add from '../../../../../public/assets/images/add.png'
 import subtract from '../../../../../public/assets/images/subtract.png' */
 
-export const ProductInformation = ({ data }: { data: ProductDataType }) => {
-    const { bigImg, title, price, description, dimensions } = data
+export const ProductInformation = ({ productData }: { productData: ProductDataType }) => {
+    const { bigImg, title, price, description, dimensions } = productData
+    const [quantity, setQuantity] = useState(1)
+    const { state, dispatch } = useContext(CartContext)
+
+    const handleDecrease = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1)
+        }
+    }
+
+    const handleIncrease = () => {
+        setQuantity(quantity + 1)
+    }
+
+    const handleAddToCart = () => {
+        dispatch({
+            type: 'ADD_TO_CART',
+            payload: {
+                ...productData,
+                quantity
+            }
+        })
+    }
+
+    useEffect(() => {
+        setQuantity(1)
+    }, [productData])
+
+    console.log(state.addedProducts)
 
     return (
         <S.Container>
@@ -46,18 +78,16 @@ export const ProductInformation = ({ data }: { data: ProductDataType }) => {
 
                         <div>
                             {/* <img src={add} alt="Add" /> */}
-                            <span>-</span>
-                            <span>1</span>
-                            <span>+</span>
+                            <span onClick={handleDecrease}>-</span>
+                            <span>{quantity}</span>
+                            <span onClick={handleIncrease}>+</span>
                             {/* <img src={subtract} alt="subtract" /> */}
                         </div>
                     </div>
 
-                    <button>Add to cart</button>
+                    <button onClick={handleAddToCart}>Add to cart</button>
                 </div>
             </div>
-
-
-        </S.Container>
+        </S.Container >
     )
 }

@@ -9,6 +9,13 @@ export const Container = styled.div`
     img {
         width: 100%;
         cursor: pointer;
+
+        &:hover {
+            transition: .6s;
+            transform: scale3d(1.07, 1.1, 1);
+        }
+
+        transition: .6s;
     }
 
     h4 {
