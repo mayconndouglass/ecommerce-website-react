@@ -1,6 +1,5 @@
-import { CardProduct } from './CardProduct'
-// import { productData } from './data'
 import { Button } from '../Button'
+import { CardProduct } from './CardProduct'
 
 import { ProductDataType } from '../../@types/product-data-type'
 

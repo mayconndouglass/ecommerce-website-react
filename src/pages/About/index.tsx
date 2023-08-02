@@ -9,15 +9,17 @@ import { SignupV2 } from '../../components/SignupV2'
 
 export const About = () => {
     return (
-        <main>
+        <>
             <Banner />
             <Header />
-            <AboutUs />
-            <AboutComponent />
-            <OurService />
-            <Features />
-            <SignupV2 />
+            <main>
+                <AboutUs />
+                <AboutComponent />
+                <OurService />
+                <Features />
+                <SignupV2 />
+            </main>
             <FooterV2 />
-        </main>
+        </>
     )
 }

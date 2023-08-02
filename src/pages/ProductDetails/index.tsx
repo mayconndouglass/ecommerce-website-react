@@ -19,22 +19,24 @@ export const ProductDetails = () => {
     const productData = allProducts.find(product => product.id === Number(id))
 
     return (
-        <S.Main>
+        <S.Container>
             <Banner />
             <HeaderV2 />
-            <ProductInformation data={productData!} />
+            <main>
+                <ProductInformation productData={productData!} />
 
-            <S.ProductsContainer>
-                <h3>
-                    You might also like
-                </h3>
-            </S.ProductsContainer>
+                <S.ProductsContainer>
+                    <h3>
+                        You might also like
+                    </h3>
+                </S.ProductsContainer>
 
-            <Products data={featuredProducts} />
+                <Products data={featuredProducts} />
 
-            <Features />
-            <SignupV2 />
+                <Features />
+                <SignupV2 />
+            </main>
             <FooterV2 />
-        </S.Main>
+        </S.Container>
     )
 }

@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import * as S from './styles'
 
 import iconSearch from '/assets/images/icon-search.svg'
@@ -14,9 +16,9 @@ export const Header = () => {
         <S.Container>
             <S.HeaderTop>
                 <img src={iconSearch} alt="Icon Search" />
-                <p>Avion</p>
+                <Link to={'/'}><p>Avion</p></Link>
                 <div>
-                    <img src={iconCart} alt="Icon Card" />
+                    <Link to={'/cart'}><img src={iconCart} alt="Icon Card" /></Link>
                     <img src={iconAvatar} alt="Icon Avatar" />
                     <img className='menu' src={iconMenu} alt="Icon Menu" onClick={() => setIsOpen(!isOpen)} />
 

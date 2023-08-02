@@ -16,14 +16,16 @@ export const Home = () => {
     const { featuredProducts } = useContext(ProductContext)
 
     return (
-        <S.Main>
+        <S.Container>
             <Header />
-            <Hero />
-            <Features />
-            <Products data={featuredProducts} />
-            <About />
-            <Signup />
+            <main>
+                <Hero />
+                <Features />
+                <Products data={featuredProducts} />
+                <About />
+                <Signup />
+            </main>
             <Footer />
-        </S.Main>
+        </S.Container>
     )
 }

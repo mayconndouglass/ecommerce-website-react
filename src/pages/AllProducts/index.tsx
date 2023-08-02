@@ -12,11 +12,13 @@ export const AllProducts = () => {
     const { allProducts } = useContext(ProductContext)
 
     return (
-        <S.Main>
+        <S.Container>
             <HeaderV2 />
-            <Filter />
-            <Products data={allProducts} />
+            <main>
+                <Filter />
+                <Products data={allProducts} />
+            </main>
             <Footer />
-        </S.Main>
+        </S.Container>
     )
 }
