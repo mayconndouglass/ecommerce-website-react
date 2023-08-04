@@ -39,6 +39,8 @@ export const ProductInformation = ({ productData }: { productData: ProductDataTy
     }, [productData])
 
     console.log(state.addedProducts)
+    console.log(state.cartQuantity)
+    console.log(state.totalPrice)
 
     return (
         <S.Container>
