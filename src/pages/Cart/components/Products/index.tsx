@@ -1,10 +1,15 @@
+import { useContext } from 'react'
+import { CartContext } from '../../../../contexts/CartContext'
+
 import * as S from './styles'
 
 import { Product } from '../Product'
 
-import { fakeProducts } from './fakeProducts'
+// import { fakeProducts } from './fakeProducts'
 
 export const Products = () => {
+    const { state } = useContext(CartContext)
+
     return (
         <S.Container>
             <article className='container-products'>
@@ -16,8 +21,8 @@ export const Products = () => {
                 </div>
                 <S.Divider />
                 {
-                    fakeProducts.map((product, index) => (
-                        <Product key={index} {...product} />
+                    state.addedProducts.map((product) => (
+                        <Product key={product.id} {...product} />
                     ))
                 }
                 <S.Divider />
