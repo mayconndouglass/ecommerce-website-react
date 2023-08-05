@@ -6,7 +6,7 @@ import { CartProductDataType } from '../../../../@types/cartproduct-data-type'
 import * as S from './styles'
 
 export const Product = ({ ...props }: CartProductDataType) => {
-    const { state, dispatch } = useContext(CartContext)
+    const { dispatch } = useContext(CartContext)
     const [quantity, setQuantity] = useState(props.quantity)
 
     const handleDecrease = () => {
@@ -32,8 +32,6 @@ export const Product = ({ ...props }: CartProductDataType) => {
     return (
         <S.Container>
             <div className='info'>
-                <h2>{state.totalPrice}</h2>
-                <h2>{state.cartQuantity}</h2>
                 <img src={props.img} alt={props.title} title={props.title} />
                 <div>
                     <p className='name'>{props.title}</p>
