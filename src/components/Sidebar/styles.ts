@@ -19,12 +19,12 @@ export const Sidebar = styled.div<statusSideBar>`
     background-color: white;
     padding: ${(props) => (props.active ? '1rem' : '0')};
 
-    img {
+    & > img {
         cursor: pointer;
         position: absolute;
 
-        width: 25px;
-        height: 25px;
+        width: 25px !important;
+        height: 25px !important;
     }
 
     .menuLinks {

@@ -11,7 +11,6 @@ type SidebarProps = {
 
 export const Sidebar = ({ isOpen, setState, options }: SidebarProps) => {
 
-
     return (
         <S.Sidebar active={isOpen} >
             <img src={iconArrow} alt="Fechar menu" onClick={() => setState(!isOpen)} />
