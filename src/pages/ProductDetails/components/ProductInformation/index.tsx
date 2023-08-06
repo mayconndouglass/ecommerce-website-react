@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from 'react'
+import { toast } from 'react-toastify'
 
 import { ProductDataType } from '../../../../@types/product-data-type'
 
@@ -87,7 +88,10 @@ export const ProductInformation = ({ productData }: { productData: ProductDataTy
                         </div>
                     </div>
 
-                    <button onClick={handleAddToCart}>Add to cart</button>
+                    <button onClick={() => {
+                        handleAddToCart()
+                        toast.success('Added to cart'/* , { position: 'top-center' } */)
+                    }}>Add to cart</button>
                 </div>
             </div>
         </S.Container >
