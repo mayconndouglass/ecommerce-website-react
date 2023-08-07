@@ -1,5 +1,5 @@
-import { useContext } from 'react'
-import { ProductContext } from '../../contexts/ProductContext'
+import { useEffect } from 'react'
+import { useProduct } from '../../contexts/ProductContext'
 
 import * as S from './styles'
 
@@ -9,7 +9,11 @@ import { Products } from '../../components/Products'
 import { Footer } from '../../components/Footer'
 
 export const AllProducts = () => {
-    const { allProducts } = useContext(ProductContext)
+    const { allProducts } = useProduct()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <S.Container>

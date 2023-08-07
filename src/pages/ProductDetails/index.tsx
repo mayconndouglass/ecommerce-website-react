@@ -1,7 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { useContext } from 'react'
-
-import { ProductContext } from '../../contexts/ProductContext'
+import { useProduct } from '../../contexts/ProductContext'
 
 import * as S from './style'
 
@@ -15,7 +13,7 @@ import { Banner } from '../../components/Banner'
 
 export const ProductDetails = () => {
     const { id } = useParams()
-    const { allProducts, featuredProducts } = useContext(ProductContext)
+    const { allProducts, featuredProducts } = useProduct()
     const productData = allProducts.find(product => product.id === Number(id))
 
     return (
