@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
-import { CartContext } from '../../contexts/CartContext'
+import { useCart } from '../../contexts/CartContext'
 
 import * as S from './styles'
 import iconCart from '/public/assets/images/icon-cart.svg'
 
 export const Cart = () => {
-    const { state } = useContext(CartContext)
+    const { state } = useCart()
 
     return (
         <S.Container>
