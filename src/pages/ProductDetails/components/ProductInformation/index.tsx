@@ -13,7 +13,16 @@ import subtract from '../../../../../public/assets/images/subtract.png' */
 export const ProductInformation = ({ productData }: { productData: ProductDataType }) => {
     const { bigImg, title, price, description, dimensions } = productData
     const [quantity, setQuantity] = useState(1)
-    const { state, dispatch } = useContext(CartContext)
+    const { dispatch } = useContext(CartContext)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        setQuantity(1)
+    }, [productData])
 
     const handleDecrease = () => {
         if (quantity > 1) {
@@ -34,14 +43,6 @@ export const ProductInformation = ({ productData }: { productData: ProductDataTy
             }
         })
     }
-
-    useEffect(() => {
-        setQuantity(1)
-    }, [productData])
-
-    console.log(state.addedProducts)
-    console.log(state.cartQuantity)
-    console.log(state.totalPrice)
 
     return (
         <S.Container>

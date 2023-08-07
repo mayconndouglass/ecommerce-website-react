@@ -1,6 +1,4 @@
-import { useContext } from 'react'
-
-import { ProductContext } from '../../contexts/ProductContext'
+import { useProduct } from '../../contexts/ProductContext'
 
 import * as S from './styles'
 
@@ -13,7 +11,7 @@ import { Signup } from './components/Signup'
 import { Footer } from '../../components/Footer'
 
 export const Home = () => {
-    const { featuredProducts } = useContext(ProductContext)
+    const { featuredProducts } = useProduct()
 
     return (
         <S.Container>
