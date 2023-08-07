@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { toast } from 'react-toastify'
 
 import { ProductDataType } from '../../../../@types/product-data-type'
 
-import { CartContext } from '../../../../contexts/CartContext'
+import { useCart } from '../../../../contexts/CartContext'
 
 import * as S from './styles'
 
@@ -13,7 +13,7 @@ import subtract from '../../../../../public/assets/images/subtract.png' */
 export const ProductInformation = ({ productData }: { productData: ProductDataType }) => {
     const { bigImg, title, price, description, dimensions } = productData
     const [quantity, setQuantity] = useState(1)
-    const { dispatch } = useContext(CartContext)
+    const { dispatch } = useCart()
 
     useEffect(() => {
         window.scrollTo(0, 0)

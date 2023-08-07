@@ -1,5 +1,4 @@
-import { useContext } from 'react'
-import { CartContext } from '../../../../contexts/CartContext'
+import { useCart } from '../../../../contexts/CartContext'
 
 import * as S from './styles'
 
@@ -8,7 +7,7 @@ import { Product } from '../Product'
 // import { fakeProducts } from './fakeProducts'
 
 export const Products = () => {
-    const { state } = useContext(CartContext)
+    const { state } = useCart()
 
     return (
         <S.Container>

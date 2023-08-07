@@ -1,12 +1,12 @@
-import { useState, useContext, useEffect } from 'react'
-import { CartContext } from '../../../../contexts/CartContext'
+import { useState, useEffect } from 'react'
+import { useCart } from '../../../../contexts/CartContext'
 
 import { CartProductDataType } from '../../../../@types/cartproduct-data-type'
 
 import * as S from './styles'
 
 export const Product = ({ ...props }: CartProductDataType) => {
-    const { dispatch } = useContext(CartContext)
+    const { dispatch } = useCart()
     const [quantity, setQuantity] = useState(props.quantity)
 
     const handleDecrease = () => {
