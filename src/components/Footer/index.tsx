@@ -1,6 +1,9 @@
 import * as S from './styles'
 import { socialMedia } from '../../data/social-media-data'
 
+import { Link } from 'react-router-dom'
+import { SignupInput } from '../SignupInput'
+
 export const Footer = () => {
     return (
         <S.Container>
@@ -13,7 +16,11 @@ export const Footer = () => {
                             <li>Best sellers</li>
                             <li>Recently viewed</li>
                             <li>Popular this week</li>
-                            <li>All products</li>
+                            <li>
+                                <Link to="/products">
+                                    All products
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -32,7 +39,11 @@ export const Footer = () => {
                     <div className="list">
                         <p>Our company</p>
                         <ul>
-                            <li>About us</li>
+                            <li>
+                                <Link to="/About">
+                                    About us
+                                </Link>
+                            </li>
                             <li>Vacancies</li>
                             <li>Contact us</li>
                             <li>Privacy</li>
@@ -44,8 +55,7 @@ export const Footer = () => {
                         <h4>Join our mailing list</h4>
 
                         <div className="input-footer">
-                            <input type="text" placeholder="your@email.com" />
-                            <button>Sign up</button>
+                            <SignupInput backgroundButton='white' buttonColor='#000' />
                         </div>
                     </div>
                 </S.Grid>

@@ -10,11 +10,18 @@ export const Button = styled.button`
 
     width: 170px;
     height: 56px;
-    padding: 1rem 2rem;
-    background-color: ${props => props.theme['light-gray']};
-    color: #2A254B;
+    background-color: ${(props) => props.theme['light-gray']};
+    color: #2a254b;
 
     font-size: 1rem;
     font-family: Satoshi, sans-serif;
     font-weight: 400;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
 `

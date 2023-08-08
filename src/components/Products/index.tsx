@@ -5,6 +5,8 @@ import { ProductDataType } from '../../@types/product-data-type'
 
 import * as S from './styles'
 
+import { Link } from 'react-router-dom'
+
 type ProductsProps = {
     data: ProductDataType[]
 }
@@ -18,7 +20,9 @@ export const Products = ({ data }: ProductsProps) => {
                 ))}
             </div>
             <Button>
-                View collection
+                <Link to='/products'>
+                    View collection
+                </Link>
             </Button>
         </S.Container>
     )

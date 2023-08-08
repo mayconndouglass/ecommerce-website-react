@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useCart } from '../../contexts/CartContext'
 
 import * as S from './styles'
-import iconCart from '/public/assets/images/icon-cart.svg'
+import iconCart from '/assets/images/icon-cart.svg'
 
 export const Cart = () => {
     const { state } = useCart()

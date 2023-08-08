@@ -1,3 +1,4 @@
+import { SignupInput } from '../SignupInput'
 import * as S from './styles'
 
 export const SignupV2 = () => {
@@ -12,8 +13,7 @@ export const SignupV2 = () => {
                 </p>
 
                 <div className="input-container">
-                    <input type="text" placeholder="your@email.com" />
-                    <button>Sign up</button>
+                    <SignupInput />
                 </div>
             </div>
         </S.Container>

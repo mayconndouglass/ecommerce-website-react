@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
+        color: #2A254B;
     }
 
     @font-face {

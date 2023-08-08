@@ -1,7 +1,8 @@
+import { ReactNode } from 'react'
 import * as S from './styles'
 
 type ChildrenPropsType = {
-    children: string
+    children: string | ReactNode
 }
 
 export const Button = ({ children }: ChildrenPropsType) => {

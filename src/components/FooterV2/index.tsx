@@ -2,7 +2,11 @@ import * as S from './styles'
 
 import { socialMedia } from '../../data/social-media-data'
 
+import { Link } from 'react-router-dom'
+
 export const FooterV2 = () => {
+    const rootUrl = window.location.origin
+
     return (
         <S.Container>
             <div className="lists">
@@ -41,7 +45,11 @@ export const FooterV2 = () => {
                             <li>Best sellers</li>
                             <li>Recently viewed</li>
                             <li>Popular this week</li>
-                            <li>All products</li>
+                            <li>
+                                <Link to={rootUrl + '/products'}>
+                                    All products
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -60,7 +68,11 @@ export const FooterV2 = () => {
                     <div className="list">
                         <p>Our company</p>
                         <ul>
-                            <li>About us</li>
+                            <li>
+                                <Link to={rootUrl + '/about'}>
+                                    About us
+                                </Link>
+                            </li>
                             <li>Vacancies</li>
                             <li>Contact us</li>
                             <li>Privacy</li>

@@ -10,7 +10,7 @@ export const HeaderTop = styled.section`
     padding-block: 1rem;
     padding-inline: 2rem;
 
-    p {
+    .logo {
         color: #22202e;
         font-family: "Clash Display";
         font-size: 1.5rem;
