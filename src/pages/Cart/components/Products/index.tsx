@@ -11,6 +11,7 @@ export const Products = () => {
 
     return (
         <S.Container>
+            <h2>{state.totalPrice}</h2>
             <article className='container-products'>
                 <h1>Your shopping cart</h1>
                 <div className='titles'>
