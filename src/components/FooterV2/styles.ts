@@ -5,33 +5,30 @@ export const Container = styled.section`
 
     background-color: ${props => props.theme['dark-primary']};
 
+    @media screen and (max-width: 864px) {
+        padding: 3.5rem 0 1.25rem 0;
+    }
+
     .lists {
-        display: flex;
-        gap: 170px;
+        display: grid;
+        grid-template-columns: 40% 50%;
+        gap: 10%;
 
         max-width: 1440px;
         margin: 0 auto;
 
-        .first-group {
+        @media screen and (max-width: 864px) {
             display: flex;
-            gap: 65px;
-
-            @media screen and (max-width: 1226px){
-                gap: 30px;
-            }
-
-            @media screen and (max-width: 1210px){
-                justify-content: space-around;
-                gap: 30px;
-            }
-        }
-
-        @media screen and (max-width: 1226px){
-            gap: 65px;
-        }
-
-        @media screen and (max-width: 1210px){
             flex-direction: column;
+            gap: 3rem;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .first-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
         }
     }
 
@@ -72,12 +69,18 @@ export const Container = styled.section`
         .social-midia {
             display: flex;
             gap: 24px;
-        }
 
-        @media screen and (max-width: 1210px){
-            .social-midia {
+            @media screen and (max-width: 1180px) {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media screen and (max-width: 864px) {
+                grid-template-columns: repeat(3, 3rem);
+            }
+
+            @media screen and (max-width: 512px) {
+                grid-template-columns: repeat(3, 1.5rem);
             }
         }
     }
@@ -95,10 +98,6 @@ export const Container = styled.section`
             text-align: center;
         }
     }
-
-    @media screen and (max-width: 650px){
-        padding: 3.5rem 1rem 1.25rem 1rem;
-    }
 `
 
 export const Divider = styled.div`
@@ -107,26 +106,29 @@ export const Divider = styled.div`
     margin: 3rem auto 0 auto;
 
     background-color: ${(props) => props.theme.primary};
+
+    @media screen and (max-width: 864px) {
+        width: 90%;
+    }
 `
 
 export const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 175px);
-    gap: 109px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6.8rem;
 
-    @media screen and (max-width: 1500px){
-        grid-template-columns: repeat(3, 1fr);
+    @media screen and (max-width: 1180px){
+        gap: 2rem;
     }
 
-    @media screen and (max-width: 1210px){
-        display: flex;
-        justify-content: space-around;
+    @media screen and (max-width: 864px){
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .list {
         color: ${(props) => props.theme.white};
 
-        @media screen and (max-width: 650px) {
+        @media screen and (max-width: 864px) {
             &:nth-child(2) {
                 display: none;
             }

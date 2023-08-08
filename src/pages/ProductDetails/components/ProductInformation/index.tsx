@@ -1,8 +1,9 @@
-import { useState, useContext, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import { toast } from 'react-toastify'
 
 import { ProductDataType } from '../../../../@types/product-data-type'
 
-import { CartContext } from '../../../../contexts/CartContext'
+import { useCart } from '../../../../contexts/CartContext'
 
 import * as S from './styles'
 
@@ -12,7 +13,16 @@ import subtract from '../../../../../public/assets/images/subtract.png' */
 export const ProductInformation = ({ productData }: { productData: ProductDataType }) => {
     const { bigImg, title, price, description, dimensions } = productData
     const [quantity, setQuantity] = useState(1)
-    const { state, dispatch } = useContext(CartContext)
+    const { dispatch } = useCart()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        setQuantity(1)
+    }, [productData])
 
     const handleDecrease = () => {
         if (quantity > 1) {
@@ -33,12 +43,6 @@ export const ProductInformation = ({ productData }: { productData: ProductDataTy
             }
         })
     }
-
-    useEffect(() => {
-        setQuantity(1)
-    }, [productData])
-
-    console.log(state.addedProducts)
 
     return (
         <S.Container>
@@ -85,7 +89,10 @@ export const ProductInformation = ({ productData }: { productData: ProductDataTy
                         </div>
                     </div>
 
-                    <button onClick={handleAddToCart}>Add to cart</button>
+                    <button onClick={() => {
+                        handleAddToCart()
+                        toast.success('Added to cart'/* , { position: 'top-center' } */)
+                    }}>Add to cart</button>
                 </div>
             </div>
         </S.Container >
