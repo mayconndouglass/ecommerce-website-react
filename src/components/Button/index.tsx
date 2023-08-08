@@ -1,4 +1,6 @@
 import { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
+
 import * as S from './styles'
 
 type ChildrenPropsType = {
@@ -7,8 +9,10 @@ type ChildrenPropsType = {
 
 export const Button = ({ children }: ChildrenPropsType) => {
     return (
-        <S.Button>
-            {children}
-        </S.Button>
+        <Link to='/products'>
+            <S.Button>
+                {children}
+            </S.Button>
+        </Link>
     )
 }
