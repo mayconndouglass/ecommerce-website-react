@@ -1,10 +1,9 @@
+import { useEffect } from 'react'
+
 import { Button } from '../Button'
 import armchair from '/assets/images/armchair.png'
 
 import * as S from './styles'
-
-import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
 
 export const About = () => {
 
@@ -21,9 +20,7 @@ export const About = () => {
                     small studio in South London in early 2014
                 </p>
                 <Button>
-                    <Link to="/products">
-                        View collection
-                    </Link>
+                    View collection
                 </Button>
             </div>
 
