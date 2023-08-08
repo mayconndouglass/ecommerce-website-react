@@ -11,7 +11,7 @@ export const Container = styled.section`
     min-height: 444px;
     margin: 0 auto;
 
-    background-image: url("./assets/images/signup-background.png");
+    background-image: url("/assets/images/signup-background.png");
 
     h2 {
         font-family: "Clash Display";

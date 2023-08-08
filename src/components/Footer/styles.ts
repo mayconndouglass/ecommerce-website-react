@@ -9,9 +9,13 @@ export const Container = styled.footer`
         padding: 3.43rem 4.93rem 1.25rem 4.93rem;
 
         font-family: "satoshi";
+        transition: 250ms ease all;
+
+        @media screen and (max-width: 700px) {
+            padding-inline: 2rem;
+        }
 
         @media screen and (max-width: 565px) {
-            padding-inline: 3rem;
             padding-block: 3rem 1.25rem;
         }
     }
