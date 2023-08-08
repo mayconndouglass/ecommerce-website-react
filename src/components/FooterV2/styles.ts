@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
+export const Container = styled.footer`
     padding: 3.5rem 5rem 1.25rem 5rem;/* 56px 80px 20px 80px */
 
     background-color: ${props => props.theme['dark-primary']};
@@ -16,6 +16,8 @@ export const Container = styled.section`
 
         max-width: 1440px;
         margin: 0 auto;
+
+        font-family: 'Clash Display';
 
         @media screen and (max-width: 864px) {
             display: flex;
