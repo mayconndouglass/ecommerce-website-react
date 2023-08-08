@@ -3,11 +3,11 @@ import { useState } from 'react'
 
 import iconSearch from '/assets/images/icon-search.svg'
 import iconAvatar from '/assets/images/icon-avatar.svg'
-import iconCart from '/assets/images/icon-cart.svg'
 import iconMenu from '/assets/images/icon-menu.svg'
 
 import { Sidebar } from '../../../../components/Sidebar'
 import { Link } from 'react-router-dom'
+import { Cart } from '../../../../components/Cart'
 
 export const Header = () => {
 
@@ -25,7 +25,7 @@ export const Header = () => {
                         <a href="#">Blog</a>
                     </S.Nav>
                     <img className='search' src={iconSearch} alt="Icon Search" />
-                    <img className='card' src={iconCart} alt="Icon Card" />
+                    <Cart />
                     <img className='avatar' src={iconAvatar} alt="Icon Avatar" />
                     <img className='menu' src={iconMenu} alt="Icon Menu" onClick={() => setIsOpen(!isOpen)} />
 
