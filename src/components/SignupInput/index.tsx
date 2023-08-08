@@ -7,7 +7,12 @@ type SignupInputProps = {
     backgroundInput?: string
 }
 
-export const SignupInput = ({ buttonColor, buttonSize, backgroundButton, backgroundInput }: SignupInputProps) => {
+export const SignupInput = ({
+    buttonColor,
+    buttonSize,
+    backgroundButton,
+    backgroundInput,
+}: SignupInputProps) => {
 
     return (
         <S.Container>
@@ -18,7 +23,12 @@ export const SignupInput = ({ buttonColor, buttonSize, backgroundButton, backgro
                 placeholder="your@email.com"
             />
 
-            <S.Button buttonColor={buttonColor} backgroundButton={backgroundButton}>Sign up</S.Button>
+            <S.Button
+                buttonColor={buttonColor}
+                backgroundButton={backgroundButton}
+            >
+                Sign up
+            </S.Button>
         </S.Container>
     )
 }

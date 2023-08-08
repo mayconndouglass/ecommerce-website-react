@@ -2,6 +2,7 @@ import * as S from './styles'
 import { socialMedia } from '../../data/social-media-data'
 
 import { Link } from 'react-router-dom'
+import { SignupInput } from '../SignupInput'
 
 export const Footer = () => {
     return (
@@ -54,8 +55,7 @@ export const Footer = () => {
                         <h4>Join our mailing list</h4>
 
                         <div className="input-footer">
-                            <input type="text" placeholder="your@email.com" />
-                            <button>Sign up</button>
+                            <SignupInput backgroundButton='white' buttonColor='#000' />
                         </div>
                     </div>
                 </S.Grid>
