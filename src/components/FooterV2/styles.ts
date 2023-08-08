@@ -149,6 +149,10 @@ export const Grid = styled.div`
             li {
                 font-size: 0.875rem;
                 white-space: nowrap;
+                cursor: pointer;
+                a {
+                    color: white;
+                }
             }
         }
     }

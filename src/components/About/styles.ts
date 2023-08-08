@@ -34,7 +34,9 @@ export const Container = styled.section`
         Button {
             margin-top: auto;
             background-color: #f9f9f926;
-            color: white;
+            a {
+                color: white;
+            }
         }
     }
 
@@ -76,7 +78,6 @@ export const Container = styled.section`
     }
 
     @media screen and (max-width: 565px) {
-
         .card-about {
             width: 100%;
             height: 342px;

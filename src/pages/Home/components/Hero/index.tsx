@@ -1,5 +1,6 @@
 import * as S from './styles'
 import { Button } from '../../../../components/Button'
+import { Link } from 'react-router-dom'
 
 export const Hero = () => {
     return (
@@ -11,7 +12,9 @@ export const Hero = () => {
                     homeware through to furniture today
                 </p>
                 <Button>
-                    View collection
+                    <Link to="/products">
+                        View collection
+                    </Link>
                 </Button>
             </div>
             <div className='bg-mobile'></div>

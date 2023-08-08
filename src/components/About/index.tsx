@@ -3,7 +3,15 @@ import armchair from '/assets/images/armchair.png'
 
 import * as S from './styles'
 
+import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+
 export const About = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <S.Container>
             <div className="card-about">
@@ -13,7 +21,9 @@ export const About = () => {
                     small studio in South London in early 2014
                 </p>
                 <Button>
-                    View collection
+                    <Link to="/products">
+                        View collection
+                    </Link>
                 </Button>
             </div>
 

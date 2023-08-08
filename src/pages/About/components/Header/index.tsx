@@ -7,6 +7,7 @@ import iconCart from '/assets/images/icon-cart.svg'
 import iconMenu from '/assets/images/icon-menu.svg'
 
 import { Sidebar } from '../../../../components/Sidebar'
+import { Link } from 'react-router-dom'
 
 export const Header = () => {
 
@@ -16,7 +17,7 @@ export const Header = () => {
     return (
         <S.Container>
             <S.HeaderTop>
-                <p>Avion</p>
+                <Link className='logo' to="/">Avion</Link>
                 <div>
                     <S.Nav>
                         <a href="#">About us</a>

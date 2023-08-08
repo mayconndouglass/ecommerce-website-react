@@ -1,6 +1,8 @@
 import * as S from './styles'
 import { socialMedia } from '../../data/social-media-data'
 
+import { Link } from 'react-router-dom'
+
 export const Footer = () => {
     return (
         <S.Container>
@@ -13,7 +15,11 @@ export const Footer = () => {
                             <li>Best sellers</li>
                             <li>Recently viewed</li>
                             <li>Popular this week</li>
-                            <li>All products</li>
+                            <li>
+                                <Link to="/products">
+                                    All products
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -32,7 +38,11 @@ export const Footer = () => {
                     <div className="list">
                         <p>Our company</p>
                         <ul>
-                            <li>About us</li>
+                            <li>
+                                <Link to="/About">
+                                    About us
+                                </Link>
+                            </li>
                             <li>Vacancies</li>
                             <li>Contact us</li>
                             <li>Privacy</li>
