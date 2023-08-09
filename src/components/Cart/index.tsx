@@ -9,10 +9,11 @@ export const Cart = () => {
 
     return (
         <S.Container>
-            <Link to={'/cart'}><img src={iconCart} alt="Icon Card" /></Link>
-            {state.cartQuantity > 0 && (
-                <span>{state.cartQuantity}</span>
-            )}
+            <Link to={'/cart'}><img src={iconCart} alt="Icon Card" />
+                {state.cartQuantity > 0 && (
+                    <span>{state.cartQuantity}</span>
+                )}
+            </Link>
         </S.Container>
     )
 }

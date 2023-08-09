@@ -15,11 +15,21 @@ export type CartType = {
     totalPrice: number
 }
 
-export const cartInitialState: CartType = {
-    addedProducts: [],
-    cartQuantity: 0,
-    totalPrice: 0
+const getLocalStorageData = (): CartType => {
+    const {
+        addedProducts = [],
+        cartQuantity = 0,
+        totalPrice = 0
+    }: CartType = JSON.parse(localStorage.getItem('dataProducts') ?? '{}')
+
+    return {
+        addedProducts,
+        cartQuantity,
+        totalPrice
+    }
 }
+
+export const cartInitialState: CartType = getLocalStorageData()
 
 export const cartReducer = (state: CartType, action: ReducerActionType) => {
     switch (action.type) {
@@ -38,12 +48,15 @@ export const cartReducer = (state: CartType, action: ReducerActionType) => {
 
             const updatedTotalPrice = totalPrice + Number(price.slice(1)) * quantity
             const updatedCartQuantity = cartQuantity + quantity
-
-            return {
+            const newData = {
                 addedProducts: updatedProducts,
                 totalPrice: updatedTotalPrice,
                 cartQuantity: updatedCartQuantity,
             }
+
+            localStorage.setItem('dataProducts', JSON.stringify({ ...newData }))
+
+            return { ...newData }
             break
         }
 
@@ -64,14 +77,16 @@ export const cartReducer = (state: CartType, action: ReducerActionType) => {
                 const updatedTotalPrice = updatedProducts.reduce((acc, pro) => {
                     return acc + Number(pro.price.slice(1)) * pro.quantity!
                 }, 0)
-                console.log('UPDATEDPRODUCTS', updatedProducts)
-                console.log('CARTQUANTITY', updatedCartQuantity)
-                console.log('TOTALPRICE', updatedTotalPrice)
-                return {
+
+                const newData = {
                     addedProducts: updatedProducts,
-                    cartQuantity: updatedCartQuantity,
                     totalPrice: updatedTotalPrice,
+                    cartQuantity: updatedCartQuantity,
                 }
+
+                localStorage.setItem('dataProducts', JSON.stringify({ ...newData }))
+
+                return { ...newData }
             }
 
             return state

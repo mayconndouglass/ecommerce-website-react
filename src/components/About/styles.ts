@@ -31,11 +31,12 @@ export const Container = styled.section`
             font-weight: 400;
         }
 
-        Button {
+        a {
             margin-top: auto;
-            background-color: #f9f9f926;
-            a {
+
+            Button {
                 color: white;
+                background-color: #f9f9f926;
             }
         }
     }

@@ -94,7 +94,13 @@ export const Container = styled.section`
                 justify-content: center;
 
                 input {
-                    width: 224px;
+                    /* width: 224px; */
+                    width: 100%;
+                }
+
+                button {
+                    margin-top: 0.5rem;
+                    width: 100%;
                 }
             }
         }

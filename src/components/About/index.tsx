@@ -1,15 +1,9 @@
-import { useEffect } from 'react'
-
 import { Button } from '../Button'
 import armchair from '/assets/images/armchair.png'
 
 import * as S from './styles'
 
 export const About = () => {
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
 
     return (
         <S.Container>

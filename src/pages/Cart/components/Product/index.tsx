@@ -7,7 +7,7 @@ import * as S from './styles'
 
 export const Product = ({ ...props }: CartProductDataType) => {
     const { dispatch } = useCart()
-    const [quantity, setQuantity] = useState(props.quantity)
+    const [quantity, setQuantity] = useState(props.quantity ?? 0)
 
     const handleDecrease = () => {
         if (quantity! > 1) {
@@ -59,7 +59,7 @@ export const Product = ({ ...props }: CartProductDataType) => {
 
             <div className='total'>
                 {/* temp */}
-                <p>{props.price}</p>
+                <p>{`£${quantity * Number(props.price.slice(1))}`}</p>
             </div>
 
         </S.Container>
