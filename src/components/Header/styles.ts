@@ -95,14 +95,14 @@ export const Navigation = styled.nav`
 `
 
 interface statusSideBar {
-    active: boolean
+    $active: number
 }
 
 export const Sidebar = styled.div<statusSideBar>`
-    width: ${props => props.active ? '60%' : '0'};
+    width: ${props => props.$active ? '60%' : '0'};
     height: 100vh;
 
-    opacity: ${props => props.active ? '1' : '0'};
+    opacity: ${props => props.$active ? '1' : '0'};
     transition: all;
     transition-duration: 200ms;
 
@@ -111,7 +111,7 @@ export const Sidebar = styled.div<statusSideBar>`
     right: 0;
 
     background-color: white;
-    padding: ${props => props.active ? '1rem' : '0'};
+    padding: ${props => props.$active ? '1rem' : '0'};
 
     img {
         cursor: pointer;
@@ -127,7 +127,7 @@ export const Sidebar = styled.div<statusSideBar>`
         ul {
             width: 70%;
             margin: 0 auto;
-            display: ${props => props.active ? 'flex' : 'none'};;
+            display: ${props => props.$active ? 'flex' : 'none'};;
             flex-direction: column;
 
 

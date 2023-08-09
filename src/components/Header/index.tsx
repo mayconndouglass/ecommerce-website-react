@@ -9,7 +9,7 @@ import iconMenu from '/assets/images/icon-menu.svg'
 import arrow from '/assets/images/right-arrow.png'
 
 export const Header = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(0)
 
     return (
         <S.Container>
@@ -19,10 +19,10 @@ export const Header = () => {
                 <div>
                     <Cart />
                     <img src={iconAvatar} alt="Icon Avatar" />
-                    <img className='menu' src={iconMenu} alt="Icon Menu" onClick={() => setIsOpen(!isOpen)} />
+                    <img className='menu' src={iconMenu} alt="Icon Menu" onClick={() => setIsOpen(isOpen === 1 ? 0 : 1)} />
 
-                    <S.Sidebar active={isOpen} >
-                        <img src={arrow} alt="Fechar menu" onClick={() => setIsOpen(!isOpen)} />
+                    <S.Sidebar $active={isOpen} >
+                        <img src={arrow} alt="Fechar menu" onClick={() => setIsOpen(isOpen === 1 ? 0 : 1)} />
 
                         <div className="menuLinks">
                             <ul>
