@@ -14,7 +14,7 @@ export const Container = styled.article`
 
         div {
             padding-block: 0.5rem;
-            max-width: 11rem;
+            max-width: 20rem;
         }
         .name {
             font-family: "Clash Display";
@@ -31,6 +31,12 @@ export const Container = styled.article`
             font-size: 0.875rem;
             line-height: 150%;
             margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 3;
+            margin-right: 1rem;
         }
     }
 

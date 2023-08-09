@@ -4,8 +4,6 @@ import * as S from './styles'
 
 import { Product } from '../Product'
 
-// import { fakeProducts } from './fakeProducts'
-
 export const Products = () => {
     const { state } = useCart()
 
@@ -26,6 +24,16 @@ export const Products = () => {
                 }
                 <S.Divider />
                 <S.DividerMobile />
+                <div className='totalContainer' >
+                    <div>
+                        <p>Taxes and shipping are calculated at checkout</p>
+                        <p>
+                            <span className='subtotal'>Subtotal</span>
+                            <span className='price'>£210</span>
+                        </p>
+                    </div>
+                    <button>Go to checkout</button>
+                </div>
             </article>
         </S.Container>
     )
