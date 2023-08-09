@@ -6,9 +6,11 @@ export const Container = styled.section`
         margin-bottom: 3rem;
     }
 
-    button {
-        display: none;
-        margin-top: 3rem;
-        margin-bottom: 2.5rem;
+    main {
+        button {
+            display: none;
+            margin-top: 3rem;
+            margin-bottom: 2.5rem;
+        }
     }
 `
