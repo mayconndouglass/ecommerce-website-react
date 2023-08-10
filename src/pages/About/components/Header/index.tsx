@@ -11,7 +11,7 @@ import { Cart } from '../../../../components/Cart'
 
 export const Header = () => {
 
-    const [isOpen, setIsOpen] = useState<boolean>(false)
+    const [isOpen, setIsOpen] = useState<number>(0)
     const options: string[] = ['About us', 'Contact', 'Blog']
 
     return (
@@ -27,7 +27,7 @@ export const Header = () => {
                     <img className='search' src={iconSearch} alt="Icon Search" />
                     <Cart />
                     <img className='avatar' src={iconAvatar} alt="Icon Avatar" />
-                    <img className='menu' src={iconMenu} alt="Icon Menu" onClick={() => setIsOpen(!isOpen)} />
+                    <img className='menu' src={iconMenu} alt="Icon Menu" onClick={() => setIsOpen(isOpen === 1 ? 0 : 1)}/>
 
                     <Sidebar isOpen={isOpen} setState={setIsOpen} options={options} />
 

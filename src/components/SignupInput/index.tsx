@@ -17,15 +17,15 @@ export const SignupInput = ({
     return (
         <S.Container>
             <S.Input
-                backgroundInput={backgroundInput}
-                buttonSize={buttonSize}
+                background_input={backgroundInput}
+                button_size={buttonSize}
                 type="text"
                 placeholder="your@email.com"
             />
 
             <S.Button
-                buttonColor={buttonColor}
-                backgroundButton={backgroundButton}
+                button_color={buttonColor}
+                background_button={backgroundButton}
             >
                 Sign up
             </S.Button>

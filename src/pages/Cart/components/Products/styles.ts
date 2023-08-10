@@ -14,7 +14,7 @@ export const Container = styled.section`
     .container-products {
         max-width: 1440px;
         width: 95%;
-        padding-block: 5.25rem;
+        padding-block: 5.25rem 3.38rem;
         padding-inline: 5rem;
 
         background-color: white;
@@ -49,6 +49,44 @@ export const Container = styled.section`
         }
     }
 
+    .totalContainer {
+        margin-top: 1.5rem;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+
+            p:nth-child(1) {
+                color: ${(props) => props.theme.primary};
+                font-size: 0.875rem;
+            }
+
+            p {
+                .subtotal {
+                    font-size: 1.25rem;
+                    font-family: "Clash Display";
+                    margin-right: 1rem;
+                    color: ${(props) => props.theme.primary};
+                }
+
+                .price {
+                    font-size: 1.5rem;
+                    color: ${(props) => props.theme['dark-primary']};
+                }
+            }
+        }
+        button {
+            margin-top: 1rem;
+            display: flex;
+            margin-left: auto;
+            cursor: pointer;
+            border: none;
+            padding: 1rem 2rem;
+            background-color: ${(props) => props.theme['dark-primary']};
+            color: white;
+        }
+    }
+
     @media screen and (max-width: 880px) {
         .container-products {
             padding-inline: 2rem;
@@ -57,14 +95,41 @@ export const Container = styled.section`
     }
 
     @media screen and (max-width: 675px) {
+        h1 {
+            display: block;
+            margin-bottom: 2rem;
+        }
+
         padding: 2.25rem 0;
 
         .container-products {
             background-color: transparent;
             padding-inline: 0;
+            padding-block: 0;
             width: 90%;
             .titles {
                 display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: 565px) {
+        .totalContainer {
+            flex-direction: column-reverse;
+
+            div {
+                flex-direction: column-reverse;
+                align-items: flex-end;
+
+                p:nth-child(2) {
+                    margin-bottom: 0.6rem;
+                }
+            }
+
+            button {
+                width: 100%;
+                justify-content: center;
+                margin-top: 2.25rem;
             }
         }
     }

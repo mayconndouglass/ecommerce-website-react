@@ -16,19 +16,19 @@ export const Container = styled.section`
 `
 
 interface InputProps {
-    buttonSize?: string
-    backgroundInput?: string
+    button_size?: string
+    background_input?: string
 }
 
 export const Input = styled.input<InputProps>`
-    ${props => `width: calc(100% - ${props.buttonSize || '118px'});`}
+    ${props => `width: calc(100% - ${props.button_size || '118px'});`}
     height: 56px;
     border: none;
     outline: none;
     padding-inline: 0.875rem;
     font-family: "Satoshi";
     font-size: 1rem;
-    background-color: ${props => props.backgroundInput || 'white'};
+    background-color: ${props => props.background_input || 'white'};
 
     &::placeholder {
         color: rgba(0, 0, 0, 0.5);
@@ -36,8 +36,8 @@ export const Input = styled.input<InputProps>`
 `
 
 interface ButtonProps {
-    buttonColor?: string
-    backgroundButton?: string
+    button_color?: string
+    background_button?: string
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -47,8 +47,8 @@ export const Button = styled.button<ButtonProps>`
 
     border: none;
     outline: none;
-    background-color: ${(props) => props.backgroundButton || '#2A254B'} ;
-    color: ${(props) => props.buttonColor || 'white'};
+    background-color: ${(props) => props.background_button || '#2A254B'} ;
+    color: ${(props) => props.button_color || 'white'};
 
 
     font-family: "Satoshi";

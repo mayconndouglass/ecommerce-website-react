@@ -11,7 +11,7 @@ import iconMenu from '/assets/images/icon-menu.svg'
 
 export const HeaderV2 = () => {
     const optionsMenu = ['Plant pots', 'Ceramics', 'Tables', 'Chairs', 'Tableware', 'Cutlery']
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(0)
 
     return (
         <S.HeaderVersionTwo>
@@ -51,7 +51,7 @@ export const HeaderV2 = () => {
                     <img
                         className="menu-mobile"
                         src={iconMenu} alt="Menu"
-                        onClick={() => setIsOpen(!isOpen)}
+                        onClick={() => setIsOpen(isOpen === 1 ? 0 : 1)}
                     />
                     <Sidebar isOpen={isOpen} setState={setIsOpen} options={optionsMenu} />
                 </div>
