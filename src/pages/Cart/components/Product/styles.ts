@@ -10,11 +10,11 @@ export const Container = styled.article`
         display: flex;
         align-items: center;
         gap: 1.3rem;
-        flex: 1 1 60%;
+        flex: 1 0 60%;
 
         div {
             padding-block: 0.5rem;
-            max-width: 20rem;
+            width: min(90%, 30rem);
         }
         .name {
             font-family: "Clash Display";
@@ -42,7 +42,7 @@ export const Container = styled.article`
 
     .total {
         font-size: 1.125rem;
-        flex: 0 1 25%;
+        flex: 0 1 20%;
         text-align: end;
         margin-left: auto;
     }
@@ -65,7 +65,7 @@ export const Container = styled.article`
 
 export const containerQuantity = styled.div`
     padding-inline: 1rem;
-    flex: 0 1 25%;
+    flex: 0 1 20%;
     display: flex;
     justify-content: center;
 

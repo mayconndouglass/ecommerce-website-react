@@ -30,14 +30,14 @@ export const Container = styled.section`
             font-size: 0.875rem;
 
             p:nth-child(1) {
-                flex: 1 1 60%;
+                flex: 1 0 60%;
             }
             p:nth-child(2) {
-                flex: 0 1 25%;
+                flex: 0 1 20%;
                 text-align: center;
             }
             p:nth-child(3) {
-                flex: 0 1 25%;
+                flex: 0 1 20%;
                 text-align: end;
             }
         }
